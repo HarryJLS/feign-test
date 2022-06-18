@@ -95,6 +95,18 @@
             <version>3.2.0</version>
         </dependency>
 
+        <!-- rabbitmq依赖的客户端 -->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.14.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
 
     </dependencies>
     <dependencyManagement>
