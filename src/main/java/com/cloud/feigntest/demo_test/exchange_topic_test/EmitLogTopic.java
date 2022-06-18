@@ -1,4 +1,4 @@
-package com.cloud.feigntest.exchange_topic_test;
+package com.cloud.feigntest.demo_test.exchange_topic_test;
 
 import java.util.Scanner;
 

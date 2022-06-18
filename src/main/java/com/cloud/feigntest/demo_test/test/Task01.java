@@ -1,28 +1,21 @@
-package com.cloud.feigntest.test;
-
+package com.cloud.feigntest.demo_test.test;
 
 import com.cloud.feigntest.utils.RabbitMqUtils;
 import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
 
-import java.io.IOException;
-import java.util.concurrent.TimeoutException;
+import java.util.Scanner;
 
 /**
- * 生产者：发消息
- * */
-public class Producer {
+ * @Author jls
+ * @Description: 生产者 发送大量的消息
+ */
+public class Task01 {
+
     // 队列名称
     public static final String QUEUE_NAME = "hello";
 
-    // 发消息
     public static void main(String[] args) throws Exception {
-
-
-        // 获取信道
         Channel channel = RabbitMqUtils.getChannel();
-
         /**
          * 创建一个队列
          * 1.队列名称
@@ -32,19 +25,13 @@ public class Producer {
          * 5.其他参数 死信消息
          * */
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        // 发消息
-        String message = "jlst";
-
-        /**
-         * 发送一个消息
-         * 1.发送到哪个交换机
-         * 2.路由的key值是哪个，本次队列的名称
-         * 3.其他参数信息
-         * 4.发送消息的消息体
-         * */
-        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-        System.out.println("消息发送完毕");
-
+        // 从控制台当中接收信息
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()) {
+            String message = scanner.next();
+            channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+            System.out.println("发送消息完成：" + message);
+        }
 
     }
 }

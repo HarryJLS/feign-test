@@ -1,4 +1,4 @@
-package com.cloud.feigntest.test;
+package com.cloud.feigntest.demo_test.test;
 
 import com.cloud.feigntest.utils.RabbitMqUtils;
 import com.rabbitmq.client.CancelCallback;

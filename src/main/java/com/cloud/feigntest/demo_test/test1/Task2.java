@@ -1,4 +1,4 @@
-package com.cloud.feigntest.test1;
+package com.cloud.feigntest.demo_test.test1;
 
 import com.cloud.feigntest.utils.RabbitMqUtils;
 import com.rabbitmq.client.Channel;

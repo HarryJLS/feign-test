@@ -1,9 +1,8 @@
-package com.cloud.feigntest.test2;
+package com.cloud.feigntest.demo_test.test2;
 
 import com.cloud.feigntest.utils.RabbitMqUtils;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.ConfirmCallback;
-import org.springframework.context.support.MessageSourceAccessor;
 
 import java.util.UUID;
 import java.util.concurrent.ConcurrentNavigableMap;

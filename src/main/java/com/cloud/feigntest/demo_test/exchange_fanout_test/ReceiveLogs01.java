@@ -1,4 +1,4 @@
-package com.cloud.feigntest.exchange_fanout_test;
+package com.cloud.feigntest.demo_test.exchange_fanout_test;
 
 import com.cloud.feigntest.utils.RabbitMqUtils;
 import com.rabbitmq.client.AMQP;
