@@ -13,7 +13,7 @@ public class RabbitMqUtils {
         // 创建个连接工厂
         ConnectionFactory factory = new ConnectionFactory();
         // 工厂ip 连接RabbitMQ的队列
-        factory.setHost("");
+        factory.setHost("192.168.5.7");
         // 用户名
         factory.setUsername("admin");
         factory.setPassword("123");
